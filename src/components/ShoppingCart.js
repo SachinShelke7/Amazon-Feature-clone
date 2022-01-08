@@ -17,18 +17,18 @@ function ShoppingCart({cart, removeFromCart}) {
           {/* products */}
           {
             cart?.line_items?.map(item=>{
-             return <div className="flex my-[20px] items-center border-b pb-5 w-[400px]" key={item.id}>
+             return <div className="flex my-[20px] items-center border-b pb-5 w-[360px] md:w-[500px]" key={item.id}>
                <img
                 src={item.image.url}
                 alt="s"
-                className="pt-1 w-[180px] h-[180px] object-contain"
+                className="pt-1 w-[150px] h-[150px] md:w-[180px] md:h-[180px] object-contain"
               /> 
-              <div className="pl-[40px]">
+              <div className="pl-[20px] md:pl-[40px]">
                 <p className="font-bold">{item.name}</p>
-                <p className="my-[10px]">
+                <p className="my-[10px] text-sm">
                   <strong>{item.price.formatted_with_symbol} * {item.quantity} = {cart.currency.symbol} {item.price.raw * item.quantity}</strong>
                 </p>
-                <button className="bg-[#f0c14b] border border-black py-1 px-2 rounded-full" onClick={()=>removeFromCart(item.id)}>
+                <button className="bg-[#f0c14b] border border-black text-sm font-medium py-1 px-2 rounded-full" onClick={()=>removeFromCart(item.id)}>
                   Remove From Basket
                 </button>
               </div>
