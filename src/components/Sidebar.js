@@ -24,10 +24,10 @@ function Sidebar() {
 
       <div className={`top-14 right-0 w-full lg:w-[32vw] bg-[#232f3e] p-10 pl-20 text-white fixed h-full z-40 ease-in-out duration-500 ${ showSidebar ? "translate-x-0":"translate-x-full"}`}>
         <ul className="flex flex-col items-center space-y-5">
-          <li className="flex items-center">
+          {/* <li className="flex items-center">
             <MdOutlineMenu />
             All
-          </li>
+          </li> */}
           <li>Home&Kitchen</li>
           <li>New Release</li>
           <li>Computers</li>

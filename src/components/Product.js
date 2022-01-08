@@ -1,41 +1,28 @@
-import React from 'react'
+import React from "react";
 
-function Product() {
-    return (
-        <div className='product_main_card'>
-            <div className='product_card'>
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&98ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=799&q=80" alt="" />
-                <h3 className='product_name'>Product Name</h3>
-                <p className='price'>Price</p>
-                <button className='cart_btn'>Add to cart</button>
-            </div>
+function Product({ productsList, addToCart }) {
+  return (
+    <div className="product_main_card">
+      {productsList.map((items) => {
+        return (
+          <div className="w-full flex justify-center " key={items.id}>
+            <div className="product_card">
+              <img
+                src={items.image.url}
+                alt="product"
+                className="md:h-[300px] w-full object-cover object-top transform transition hover:scale-105 duration-200 p-1"
+              />
+              <h3 className="product_name">{items.name}</h3>
+              <p className="price">{items.price.formatted_with_symbol}</p>
+              <button className="cart_btn" onClick={() => addToCart(items.id, 1)}>Add to cart</button>
 
-            <div className='product_card'>
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=799&q=80" alt="" />
-                <h3 className='product_name'>Product Name</h3>
-                <p className='price'>Price</p>
-                <button className='cart_btn'>Add to cart</button>
+              {/* onClick={()=>addToCart(addToCart,1)} */}
             </div>
-            <div className='product_card'>
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=799&q=80" alt="" />
-                <h3 className='product_name'>Product Name</h3>
-                <p className='price'>Price</p>
-                <button className='cart_btn'>Add to cart</button>
-            </div>
-            <div className='product_card'>
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=799&q=80" alt="" />
-                <h3 className='product_name'>Product Name</h3>
-                <p className='price'>Price</p>
-                <button className='cart_btn'>Add to cart</button>
-            </div>
-            <div className='product_card'>
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=799&q=80" alt="" />
-                <h3 className='product_name'>Product Name</h3>
-                <p className='price'>Price</p>
-                <button className='cart_btn'>Add to cart</button>
-            </div>
-        </div>
-    )
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 
-export default Product
+export default Product;

@@ -20,7 +20,7 @@
                 @apply font-bold
             }
             .product_main_card{
-                @apply absolute top-[350px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 px-[8px]
+                @apply absolute top-[200px] sm:top-[250px] md:top-[300px] lg:top-[350px] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 px-[8px]
             }
 }
 
