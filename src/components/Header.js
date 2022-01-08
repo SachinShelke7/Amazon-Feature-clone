@@ -9,10 +9,10 @@ import { Link } from "react-router-dom";
 function Header({cart}) {
   return (
     <div className="bg-[#131921] text-white fixed top-0 left-0 right-0 z-50">
-      <div className="flex w-full h-14 items-center justify-between">
+      <div className="flex w-full h-14 items-center justify-center md:justify-between">
         <div className="flex items-center space-x-10">
           {/* logo */}
-          <Link to="/" className="cursor-pointer">
+          <Link to="/">
           <img
             src="https://pngimg.com/uploads/amazon/amazon_PNG25.png"
             className="pl-1 h-10 md:pl-4" alt="amazon"
@@ -64,7 +64,9 @@ function Header({cart}) {
           </div>
           </div>
           {/* cart */}
-          <Link to="/cart">
+
+          <Link to="/cart" className="hidden md:flex">
+
           <div className="flex items-center space-x-1 pr-4">
             <MdShoppingCart className="w-5 h-5" />
             <span className="-mt-[20px] w-[20px] h-[20px] inline-block bg-white text-black rounded-full text-center text-xs font-bold">{cart?.total_items}</span>

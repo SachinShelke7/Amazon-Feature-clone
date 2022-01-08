@@ -1,7 +1,7 @@
 import "./App.css";
 import Categories from "./components/Categories";
 import Header from "./components/Header";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ShoppingCart from "./components/ShoppingCart";
 import Home from "./components/Home";
 import commerce from "./lib/commerce";
@@ -44,9 +44,9 @@ const removeFromCart=async(prodId)=>{
         <Categories />
       </div>
       <Routes>
-        <Route path="/" element={<Home productsList={productsList} addToCart={addToCart} />} />
+        <Route path="/" element={<Home productsList={productsList} addToCart={addToCart} cart={cart}/>} />
         <Route path="/cart" element={<ShoppingCart cart={cart} removeFromCart={removeFromCart}/>} />
-        <Route path="/cat" element={<Categories />} />
+        <Route path="/cat" element={<Categories cart={cart} />} />
       </Routes>
     </Router>
   );

@@ -20,6 +20,7 @@ function Sidebar() {
           CATEGORIES
           <MdOutlineMenu className="pl-2 w-8 h-8"/>
         </p>
+        
       )}
 
       <div className={`top-14 right-0 w-full lg:w-[32vw] bg-[#232f3e] p-10 pl-20 text-white fixed h-full z-40 ease-in-out duration-500 ${ showSidebar ? "translate-x-0":"translate-x-full"}`}>

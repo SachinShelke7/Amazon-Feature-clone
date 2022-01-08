@@ -48,7 +48,7 @@ function ShoppingCart({cart, removeFromCart}) {
           <div>
             {" "}
             <p>
-              Subtotal ({cart?.total_items} items) <strong>{cart?.subtotal?.formatted_with_symbol}</strong>{" "}
+              Subtotal ({cart?.total_items} items) <strong>{cart?.subtotal?.formatted_with_symbol}</strong>
             </p>
             <small>
               <input type="checkbox" />
