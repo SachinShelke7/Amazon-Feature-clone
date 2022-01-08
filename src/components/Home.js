@@ -7,7 +7,7 @@ function Home({ productsList, addToCart, cart }) {
     <div>
       <div>
         <Link to="/cart" className="flex md:hidden">
-          <span className="bg-white text-gray-700 text-center text-xs font-bold w-full flex justify-center fixed top-24 z-30">
+          <span className="bg-white text-gray-700 text-center text-xs font-bold w-full flex justify-center fixed top-24 z-30 shadow-md">
             You Have {cart?.total_items} items worth<strong className="mx-1">{cart?.subtotal?.formatted_with_symbol}</strong> in Cart,Proceed To Checkout .
           </span>
         </Link>

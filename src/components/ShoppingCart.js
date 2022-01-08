@@ -2,7 +2,7 @@ import React from "react";
 
 function ShoppingCart({cart, removeFromCart}) {
   return (
-    <div className="flex p-[20px] justify-between">
+    <div className="flex flex-col md:flex-row p-[20px] justify-between">
       <div className="mb-[20px]">
         <img
           src="https://pngimg.com/uploads/amazon/amazon_PNG25.png"
@@ -17,13 +17,13 @@ function ShoppingCart({cart, removeFromCart}) {
           {/* products */}
           {
             cart?.line_items?.map(item=>{
-             return <div className="flex my-[20px] items-center border-b" key={item.id}>
+             return <div className="flex my-[20px] items-center border-b pb-5 w-[500px]" key={item.id}>
                <img
                 src={item.image.url}
                 alt="s"
                 className="pt-1 w-[180px] h-[180px] object-contain"
               /> 
-              <div className="pl-[20px]">
+              <div className="pl-[40px]">
                 <p className="font-bold">{item.name}</p>
                 <p className="my-[10px]">
                   <strong>{item.price.formatted_with_symbol} * {item.quantity} = {cart.currency.symbol} {item.price.raw * item.quantity}</strong>
@@ -40,7 +40,7 @@ function ShoppingCart({cart, removeFromCart}) {
         </div>
       </div>
 
-      <div className="">
+      <div className="w-full flex justify-center md:justify-end">
         <div
           className="flex flex-col justify-between w-[300px] h-[150px] p-[20px] bg-gray-100 border border-[#ddd] rounded-lg sticky 
           top-[120px]"
