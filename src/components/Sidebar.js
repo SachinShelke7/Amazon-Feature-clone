@@ -15,7 +15,7 @@ function Sidebar() {
       ) : (
         <p
           onClick={() => setShowSidebar(!showSidebar)}
-          className="flex text-white items-center cursor-pointer fixed right-4 top-[62px] z-30"
+          className="flex text-white items-center cursor-pointer fixed right-0 pr-2 top-[62px] z-30"
         >
           CATEGORIES
           <MdOutlineMenu className="pl-2 w-8 h-8"/>

@@ -17,7 +17,7 @@ function ShoppingCart({cart, removeFromCart}) {
           {/* products */}
           {
             cart?.line_items?.map(item=>{
-             return <div className="flex my-[20px] items-center border-b pb-5 w-[500px]" key={item.id}>
+             return <div className="flex my-[20px] items-center border-b pb-5 w-[400px]" key={item.id}>
                <img
                 src={item.image.url}
                 alt="s"
