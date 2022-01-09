@@ -4,11 +4,6 @@ function ShoppingCart({cart, removeFromCart}) {
   return (
     <div className="flex flex-col md:flex-row p-[20px] justify-between">
       <div className="mb-[20px]">
-        <img
-          src="https://pngimg.com/uploads/amazon/amazon_PNG25.png"
-          className="pl-1 h-10 md:pl-4"
-          alt="amazon"
-        />
         <div>
           <h3 className="text-lg font-bold">Hello, User </h3>
           <h2 className="text-xl font-bold p-[10px] border-b">

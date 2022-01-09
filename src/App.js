@@ -6,15 +6,24 @@ import ShoppingCart from "./components/ShoppingCart";
 import Home from "./components/Home";
 import commerce from "./lib/commerce";
 import { useEffect, useState } from "react";
+import Product from "./components/Product";
 
 function App() {
 
   const [productsList, setProductsList] = useState([]);
+  const [productsListByCategory, setProductsListByCategory] = useState([]);
+  const [categoryList, setcategoryList] = useState([]);
   const [cart, setCart] = useState([]);
 
   const fetchProducts = async () => {
     const response = await commerce.products.list();
     setProductsList(response.data);
+    // console.log(response);
+  }
+  const fetchProductsByCategory = async (category) => {
+    const response = await commerce.products.list({category_slug:[category]
+    });
+    setProductsListByCategory(response.data);
     // console.log(response);
   }
   const addToCart = async (prodId,qty) => {
@@ -31,9 +40,17 @@ const removeFromCart=async(prodId)=>{
   const response = await commerce.cart.remove(prodId)
   setCart(response.cart)
 }
+
+const fetchCategories = async() => {
+  const response = await commerce.categories.list();
+  setcategoryList(response.data);
+  console.log(response);
+}
+
   useEffect(() => {
     fetchProducts();
     fetchCart();
+    fetchCategories();
   }, []);
 
   return (
@@ -41,12 +58,13 @@ const removeFromCart=async(prodId)=>{
       
       <div className="pt-24 relative">
         <Header cart={cart}/>
-        <Categories />
+        <Categories categoryList={categoryList} />
       </div>
       <Routes>
         <Route path="/" element={<Home productsList={productsList} addToCart={addToCart} cart={cart}/>} />
         <Route path="/cart" element={<ShoppingCart cart={cart} removeFromCart={removeFromCart}/>} />
-        <Route path="/cat" element={<Categories cart={cart} />} />
+        <Route element={<Categories cart={cart} />} />
+        <Route path="/category/:slug" element={<Product  productsList={productsListByCategory} addToCart={addToCart} fetchProductsByCategory={fetchProductsByCategory}/>} />
       </Routes>
     </Router>
   );

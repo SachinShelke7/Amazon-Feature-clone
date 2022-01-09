@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { MdOutlineMenu } from "react-icons/md";
+import { Link } from "react-router-dom";
 
-function Sidebar() {
+function Sidebar({categoryList}) {
   const [showSidebar, setShowSidebar] = useState(false);
   return (
     <div className="flex justify-center items-center flex-col min-h-screen py-2 w-full md:hidden">
@@ -29,16 +30,16 @@ function Sidebar() {
             <MdOutlineMenu />
             All
           </li> */}
-          <li>Home&Kitchen</li>
-          <li>New Release</li>
-          <li>Computers</li>
-          <li>Amazon Pay</li>
-          <li>Today's Deal</li>
-          <li>Prime</li>
-          <li>Electronics</li>
-          <li>Customer Service</li>
-          <li>Fashion</li>
-          <li>Best Seller</li>
+                    {
+            categoryList?.map(category=>{
+              return <li key={category.id} className="text-gray-300 font-medium hover:scale-105 hover:text-white">
+                <Link to={`/category/${category.slug}`}>
+                {category.name}
+                </Link>
+
+                </li>
+            })
+          }
         </ul>
       </div>
     </div>
