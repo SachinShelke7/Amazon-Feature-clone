@@ -1,10 +1,17 @@
 # Amazon-Feature-clone
 
-This Amazon Clone is fully Functional with Responsive Design 
+*Live Link https://e-com-feature.vercel.app/
 
-Used: React,Tailwind CSS 3.0,Commerce JS for Backend,
+Used: React,Tailwind CSS 3.0,Commerce JS for Backend.
 
-Live Link:-  https://e-com-feature.vercel.app/
+## Features
+
+The features include:
+
+* 📝 Full E-Commerce application.
+* 📡 Realtime database From CommerceJS.
+* 📦 Full responsive
+* 📡 Hosted on Vercel.
 
 ![Screenshot (30)](https://user-images.githubusercontent.com/91312245/148933073-7ca929fa-dbd7-44fa-a5a3-887ce10b41b2.png)
 ![Screenshot (31)](https://user-images.githubusercontent.com/91312245/148933089-929a9162-33db-4915-9579-e1aba0719738.png)
