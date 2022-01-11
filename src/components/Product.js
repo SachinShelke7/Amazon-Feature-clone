@@ -8,7 +8,7 @@ function Product({ productsList, addToCart, fetchProductsByCategory }) {
   },[slug])
 
   return (
-    <div className="product_main_card">
+<div className="product_main_card relative z-[20] bg-gradient-to-b from-[#232f3e] to-bg-[#f1f1f1] pt-5 pb-20">
       {productsList?.map((items) => {
         return (
           <div className="w-full flex justify-center" key={items.id}>
@@ -26,13 +26,12 @@ function Product({ productsList, addToCart, fetchProductsByCategory }) {
               >
                 Add to cart
               </button>
-
-              {/* onClick={()=>addToCart(addToCart,1)} */}
             </div>
           </div>
         );
       })}
     </div>
+    
   );
 }
 

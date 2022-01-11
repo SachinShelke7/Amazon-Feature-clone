@@ -25,7 +25,7 @@ function Categories({ cart,categoryList }) {
 
         
 
-        <li className="hidden lg:flex">
+        <li className="hidden lg:inline-flex">
           <img
             src="https://images-eu.ssl-images-amazon.com/images/G/31/IN-hq/2021/img/Mobile_Traffic_/XCM_Manual_1321458_1651511_IN_3781247_400x39_en_IN._CB655944656_.jpg"
             className="h-6"
