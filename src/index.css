@@ -4,7 +4,7 @@
 
 @layer components {
   .header-item1 {
-    @apply flex flex-col text-xs cursor-pointer;
+    @apply flex flex-col text-xs cursor-pointer border border-transparent hover:border-white py-1 px-1;
   }
   .product_card {
     @apply bg-white p-[10px] mx-[5%] rounded-md text-center shadow-xl mb-[30px];

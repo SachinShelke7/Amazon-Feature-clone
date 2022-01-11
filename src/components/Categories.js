@@ -14,7 +14,7 @@ function Categories({ cart,categoryList }) {
           </li> */}
           {
             categoryList?.map(category=>{
-              return <li key={category.id} className="text-gray-300 font-medium hover:scale-105 hover:text-white">
+              return <li key={category.id} className="text-gray-300 font-medium hover:scale-105 hover:text-white ">
                 <Link to={`/category/${category.slug}`}>
                 {category.name}
                 </Link>

@@ -21,7 +21,7 @@ function Home({ productsList, addToCart, cart }) {
           <img
             src="https://images-eu.ssl-images-amazon.com/images/G/31/gateway-2015/amazonshop/Desktop_Banner_Recruitment_Website.jpg"
             alt=""
-            className="-mb-[15px] z-[1] absolute0 hidden md:inline-flex"
+            className="-mb-[15px] z-[1] absolute0 hidden md:inline-flex w-full"
           />
           {/* <div className="relative  bg-gradient-to-t from-white w-full h-[300px] md:h-screen z-[2]" /> */}
         </div>
