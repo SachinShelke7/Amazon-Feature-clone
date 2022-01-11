@@ -4,27 +4,33 @@
 
 @layer components {
   .header-item1 {
-    @apply flex flex-col text-xs;
+    @apply flex flex-col text-xs cursor-pointer;
   }
   .product_card {
     @apply bg-white p-[10px] mx-[5%] rounded-md text-center shadow-xl mb-[30px];
   }
   .price {
-    @apply text-[#cd9042] my-1;
+    @apply text-[#cd9042] my-1 select-none;
   }
   .cart_btn {
     @apply bg-[#cd9042] cursor-pointer py-2 px-4 rounded-full text-white font-medium hover:scale-[1.02] shadow-md hover:bg-[#dfa354];
   }
   .product_name {
-    @apply font-bold;
+    @apply font-bold select-none;
   }
   .product_main_card {
     @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 px-[8px];
   }
   .footer_p p{
-    @apply text-xs hover:underline;
+    @apply text-xs hover:underline select-none cursor-pointer;
   }
   .hover_decor p,h4{
-    @apply hover:underline;
+    @apply hover:underline select-none cursor-pointer;
+  }
+  .About_decor p{
+    @apply hover:underline hover:scale-110 cursor-pointer;
+  }
+  .Country li{
+    @apply hover:underline hover:scale-110 cursor-pointer select-none;
   }
 }

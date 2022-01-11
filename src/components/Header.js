@@ -47,7 +47,7 @@ function Header({cart}) {
           <div className="flex items-end">
             <div className="header-item1">
               <span>Hello,</span>
-              <span className="font-medium">Sign In</span>
+              <span className="font-medium">Sachin Shelke</span>
             </div>
             <MdArrowDropDown />
           </div>

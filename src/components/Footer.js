@@ -4,11 +4,11 @@ function Footer() {
   return (
     <div className="mt-10">
       {/* 1st */}
-      <div className="bg-[#37475a] hover:bg-[#485769] text-center h-10 w-full flex items-center justify-center text-white font-medium">
+      <div className="bg-[#37475a] hover:bg-[#485769] text-center h-10 w-full flex items-center justify-center text-white font-medium select-none">
         Back to top
       </div>
       {/* 2nd */}
-      <div className="bg-[#232f3e] text-white flex flex-col md:flex-row justify-center pl-5 md:pl-0 space-y-10 md:space-y-0 md:space-x-20 py-10 border-b border-gray-600">
+      <div className="bg-[#232f3e] text-white flex flex-col md:flex-row justify-center pl-5 md:pl-0 space-y-10 md:space-y-0 md:space-x-20 py-10 border-b border-gray-600 select-none About_decor">
         <div>
           <h4 className="font-medium">Get to Know Us</h4>
           <p>About Us</p>
@@ -57,7 +57,7 @@ function Footer() {
           </select>
         </div>
         <div>
-          <ul className="text-white flex space-x-3 justify-center w-full pb-5 px-20 flex-wrap hover_decor">
+          <ul className="text-white flex space-x-3 justify-center w-full pb-5 px-20 flex-wrap hover_decor cursor-pointer Country">
             <li>India</li>
             <li>Australia</li>
             <li>Brazil</li>
@@ -143,7 +143,7 @@ function Footer() {
           </div>
         </div>
 
-        <div className="font-medium text-white pt-5 pb-10 flex justify-center space-x-5 hover_decor">
+        <div className="font-medium text-white pt-5 pb-10 flex flex-wrap justify-center space-x-5 hover_decor select-none">
           <p>Conditions of Use & Sale</p>
           <p>Privacy Notice</p>
           <p>Interest-Based Ads</p>
